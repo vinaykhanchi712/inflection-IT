@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.hero {
+  background: url(./images/hero-bg.svg) top center no-repeat;
+  background-size: cover;
+}
+
+.footer {
+  background: url(./images/footer.svg) top center no-repeat;
+  background-size: cover;
+}
+
+.cta {
+  background: linear-gradient(rgba(2,2,2,.7),rgba(0,0,0,.7)),url(https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80) fixed center center;
+}
+
+/* card image: square -> rectangle transition */
+/* hide native scrollbar */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* equal square cards */
+.service-card {
+  width: 300px;       /* card width */
+  height: 300px;      /* equal square height */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+/* image area: keep it square-ish inside the card (takes top area) */
+.service-img {
+  height: 48%; /* image area portion; adjust as needed */
+  transition: transform 300ms ease, height 300ms ease;
+}
+
+/* slight hover lift */
+.service-card:hover { transform: translateY(-6px); }
+
+/* arrow buttons */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 30;
+  background: rgba(255,255,255,0.85);
+  border-radius: 9999px;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.08);
+  color: #1e3a8a; /* blue-900 */
+}
+.carousel-button:hover { background: rgba(255,255,255,1); }
+.carousel-button.left-2 { left: 8px; }
+.carousel-button.right-2 { right: 8px; }
+
+/* responsive adjustments */
+@media (max-width: 768px) {
+  .service-card { width: 240px; height: 240px; }
+  .carousel-button { display: none; } /* hide on small screens to rely on touch scroll */
+}
+
+/* clamp utility fallback (if you don't have Tailwind line-clamp) */
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
