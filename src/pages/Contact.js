@@ -31,43 +31,41 @@ const Contact = () => {
     e.preventDefault();
     document.getElementById("submitBtn").disabled = true;
     document.getElementById("submitBtn").innerHTML = "Loading...";
-    let fData = new FormData();
-    fData.append("first_name", firstName);
-    fData.append("last_name", lastName);
-    fData.append("email", email);
-    fData.append("phone_number", phone);
-    fData.append("message", message);
 
-    axios({
-      method: "post",
-      url: process.env.REACT_APP_CONTACT_API,
-      data: fData,
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
+    // Create FormData for Google Forms
+    const formData = new FormData();
+    formData.append(process.env.REACT_APP_GOOGLE_FORM_FIRST_NAME, firstName);
+    formData.append(process.env.REACT_APP_GOOGLE_FORM_LAST_NAME, lastName);
+    formData.append(process.env.REACT_APP_GOOGLE_FORM_EMAIL, email);
+    formData.append(process.env.REACT_APP_GOOGLE_FORM_PHONE, phone);
+    formData.append(process.env.REACT_APP_GOOGLE_FORM_MESSAGE, message);
+
+    // Submit to Google Forms
+    fetch(process.env.REACT_APP_GOOGLE_FORM_URL, {
+      method: "POST",
+      body: formData,
+      mode: "no-cors", // Important: Google Forms requires no-cors mode
     })
-      .then(function (response) {
+      .then(() => {
+        // no-cors mode doesn't return response, so we assume success
         document.getElementById("submitBtn").disabled = false;
         document.getElementById("submitBtn").innerHTML = "send message";
         clearInput();
-        //handle success
-        Notiflix.Report.success("Success", response.data.message, "Okay");
+        clearErrors();
+        Notiflix.Report.success(
+          "Success",
+          "Your message has been sent successfully!",
+          "Okay"
+        );
       })
-      .catch(function (error) {
+      .catch((error) => {
         document.getElementById("submitBtn").disabled = false;
         document.getElementById("submitBtn").innerHTML = "send message";
-        //handle error
-        const { response } = error;
-        if (response.status === 500) {
-          Notiflix.Report.failure(
-            "An error occurred",
-            response.data.message,
-            "Okay"
-          );
-        }
-        if (response.data.errors !== null) {
-          setErrors(response.data.errors);
-        }
+        Notiflix.Report.failure(
+          "An error occurred",
+          "Failed to send message. Please try again.",
+          "Okay"
+        );
       });
   };
   return (

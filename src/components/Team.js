@@ -3,6 +3,7 @@ import vinay from "../images/professional-picture.png";
 import webDev from "../images/web-dev.svg";
 import app from "../images/app.svg";
 import consult from "../images/consultation.svg";
+import rahul from "../images/rahul_profile_web.jpg";
 
 const TeamCard = ({ img, name, role, org, bio, twitter, linkedIn }) => (
   <article className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center group h-full">
@@ -75,18 +76,18 @@ const Team = () => {
       linkedIn: "https://www.linkedin.com/in/vinaay-khanchi-082a12196/",
     },
     {
-      img: webDev,
+      img: rahul,
       name: "Rahul Sharma",
       role: "Sr. Software Engineer",
       org: "S&P Global",
       twitter: "https://x.com/rahulsharma",
-      linkedIn: "https://www.linkedin.com/in/rahul-sharma-123456789/",
+      linkedIn: "https://www.linkedin.com/in/rahul-sharma-304b25151/",
     },
     {
       img: app,
-      name: "Akash Chaudhary",
-      role: "Sr. Software Engineer",
-      org: "S&P Global",
+      name: "Vipin Kumar",
+      role: "AI Software Engineer/Data Scientist",
+      org: "Fujitsu Research",
       twitter: "https://x.com/akashchaudhary",
       linkedIn: "https://www.linkedin.com/in/akash-chaudhary-987654321/",
     },
