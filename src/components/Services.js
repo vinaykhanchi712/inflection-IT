@@ -225,6 +225,7 @@ import img4 from "../images/digital-marketing.svg"
 import img5 from "../images/cloud-solutions.svg"
 import img6 from "../images/branding.svg"
 import img7 from "../images/consultation.svg";
+import img8 from "../images/ai-automation.svg";
 
 const ServiceCard = ({ img, title, children }) => {
   return (
@@ -382,6 +383,12 @@ const Services = () => {
       title: "Mobile App Development",
       desc:
         "We develop high-quality, custom cross-platform mobile applications that are robust and optimized for performance, scalability, and accessibility.",
+    },
+    {
+          img: img8,
+          title: "AI and Automation",
+          desc:
+            "We build intelligent AI agents that automate tasks, workflows to improve efficiency and reduce manual effort and help businesses to scale",
     },
     {
       img: img3,
