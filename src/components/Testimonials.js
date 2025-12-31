@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import kws from "../images/clients/kws.png";
-import geps from "../images/clients/geps.png";
-import protergia from "../images/clients/protergia.png";
+import kws from "../images/clients/userAny.png";
+import geps from "../images/clients/userAny.png";
+import protergia from "../images/clients/userAny.png";
 
 /*
- Testimonials carousel (slightly more compact):
+ Testimonials carousel (more compact + anonymous fallback):
  - Shows square review cards
  - Responsive: 1 / 2 / 3 visible
  - Auto-advances page-by-page
@@ -126,7 +126,7 @@ export default function Testimonials({ reviews = sampleReviews, autoDelay = 3000
     clearTimeout(manualPauseRef.timeout);
     manualPauseRef.timeout = setTimeout(() => {
       manualPauseRef.current = false;
-    }, 1200); // slightly shorter resume grace
+    }, 1200);
   };
 
   // manual dot click
@@ -138,9 +138,15 @@ export default function Testimonials({ reviews = sampleReviews, autoDelay = 3000
   // item style: each slide is exactly 100/visibleCount % width so exactly visibleCount items fit
   const itemWidthPercent = 100 / visibleCount;
 
+  // fallback handler to anonymous if avatar fails to load
+  const handleAvatarError = (e) => {
+    e.currentTarget.onerror = null;
+    e.currentTarget.src = kws;
+  };
+
   return (
     <div className="mt-6 bg-gray-100 py-6">
-      <section data-aos="fade-up" className="max-w-5xl mx-auto px-4">
+      <section data-aos="fade-up" className="max-w-4xl mx-auto px-4">
         <div className="my-3 py-2 text-center">
           <h2 className="my-2 text-2xl md:text-3xl text-blue-900 uppercase font-bold">Testimonials</h2>
           <div className="flex justify-center">
@@ -176,18 +182,19 @@ export default function Testimonials({ reviews = sampleReviews, autoDelay = 3000
                     boxSizing: "border-box",
                   }}
                 >
-                  {/* Card (more compact) */}
-                  <article className="bg-white rounded-lg shadow-sm p-3 h-full flex flex-col items-stretch">
-                    {/* square avatar area (reduced) */}
+                  {/* Card (compact) */}
+                  <article className="bg-white rounded-lg shadow-sm p-2 h-full flex flex-col items-stretch">
+                    {/* smaller square avatar area */}
                     <div
-                      style={{ width: "100%", position: "relative", paddingTop: "85%" }}
+                      style={{ width: "100%", position: "relative", paddingTop: "72%" }}
                       className="mb-2 rounded overflow-hidden bg-gray-50"
                     >
                       <img
-                        src={r.avatar}
+                        src={r.avatar || kws}
                         alt={`${r.name} avatar`}
-                        className="absolute inset-0 w-full h-full object-cover"
+                        className="absolute inset-0 w-full h-full object-contain"
                         loading="lazy"
+                        onError={handleAvatarError}
                       />
                     </div>
 
@@ -205,7 +212,7 @@ export default function Testimonials({ reviews = sampleReviews, autoDelay = 3000
             </div>
           </div>
 
-          {/* dots (slightly smaller) */}
+          {/* dots (small) */}
           <div className="flex justify-center mt-3">
             {Array.from({ length: pages }).map((_, idx) => (
               <button
