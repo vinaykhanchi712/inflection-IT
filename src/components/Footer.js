@@ -68,6 +68,7 @@ const Footer = () => {
               <ul className="text-md">
                 <li className="mb-2 text-[#013289]">Web Development</li>
                 <li className="mb-2 text-[#013289]">Mobile App Development</li>
+                <li className="mb-2 text-[#013289]">AI and Automation</li>
                 <li className="mb-2 text-[#013289]">Domain and Hosting</li>
                 <li className="mb-2 text-[#013289]">Digital Marketing</li>
                 <li className="mb-2 text-[#013289]">Cloud Solutions</li>

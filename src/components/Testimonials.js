@@ -14,48 +14,48 @@ import protergia from "../images/clients/userAny.png";
 const sampleReviews = [
   {
     id: 1,
-    name: "Aisha Khan",
-    role: "CEO, KWS",
+    name: "Rakesh Kalyan",
+    role: "CEO Kalyan Enterprise, India",
     avatar: kws,
     text:
       "Fantastic work. The team delivered on time and the product exceeded our expectations. Clear communication and strong technical skills.",
   },
   {
     id: 2,
-    name: "George Petros",
-    role: "CTO, Protergia",
+    name: "Kishu Garg",
+    role: "India",
     avatar: protergia,
     text:
       "Highly professional. The project was complex but handled well — architecture and execution were top-notch.",
   },
   {
     id: 3,
-    name: "Lina Gomez",
-    role: "Product Manager, GEPS",
+    name: "Shresth Gupta",
+    role: "Timber corp, India",
     avatar: geps,
     text:
       "Great collaboration and rapid iterations. They understood our needs quickly and shipped valuable features.",
   },
   {
     id: 4,
-    name: "Mark Reynolds",
-    role: "Head of Ops",
+    name: "Shivani Sharma",
+    role: "Product Manager, India",
     avatar: kws,
     text:
       "Reliable partner — strong focus on testing and stability. Reduced our time-to-market significantly.",
   },
   {
     id: 5,
-    name: "Priya Sen",
-    role: "Lead Designer",
+    name: "Alex Stuart",
+    role: "Ireland",
     avatar: protergia,
     text:
       "Design + engineering were in sync which made the UX polished and the product intuitive.",
   },
   {
     id: 6,
-    name: "Daniel Lee",
-    role: "Founder",
+    name: "Daniel Craig",
+    role: "Singapore",
     avatar: geps,
     text:
       "Amazing attention to detail. They turned a vague brief into a working MVP quickly.",
