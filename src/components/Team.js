@@ -85,8 +85,8 @@ const Team = () => {
     },
     {
       img: app,
-      name: "Vipin Kumar",
-      role: "AI Software Engineer/Data Scientist",
+      name: "Vipin Kumar Seth \n (IIT-ian)",
+      role: "Sr. Data Scientist",
       org: "Fujitsu Research",
       twitter: "https://x.com/akashchaudhary",
       linkedIn: "https://www.linkedin.com/in/akash-chaudhary-987654321/",
@@ -95,17 +95,17 @@ const Team = () => {
       img: consult,
       name: "Somya Sanu",
       role: "Lead Dev-sec Ops",
-      org: "Zoom",
+      org: "Zoom | ex-JPMC",
       twitter: "https://x.com/somyasanu",
-      linkedIn: "https://www.linkedin.com/in/somya-sanu-456789123/",
+      linkedIn: "https://www.linkedin.com/in/somyasanu/",
     },
     {
       img: consult,
-      name: "Abhishek Saran",
+      name: "Abhishek Saran (IIT-ian)",
       role: "Lead Dev-Ops & Infra",
       org: "Zoom",
       twitter: "https://x.com/abhisheksaran",
-      linkedIn: "https://www.linkedin.com/in/abhishek-saran-123456789/",
+      linkedIn: "https://www.linkedin.com/in/abhishek-saran-2900b/",
     },
   ];
 
