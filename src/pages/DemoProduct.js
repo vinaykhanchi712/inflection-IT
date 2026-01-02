@@ -256,7 +256,8 @@ const DemoProduct = (props) => {
                                 </div>
                                 <div className="flex flex-col">
                                     <h2 className="text-2xl">Office Address</h2>
-                                    <p className="text-gray-400">Ilo Awela, Ota, Ogun State</p>
+                                    <p className="text-gray-400">Cowrks, Gurgaon, Haryana</p>
+                  <p className="text-gray-400">India</p>
                                 </div>
                             </div>
                             
@@ -267,11 +268,12 @@ const DemoProduct = (props) => {
 
                                 <div className="flex flex-col">
                                     <h2 className="text-2xl">Call Us</h2>
-                                    <p className="text-gray-400">Tel: 08055384406</p>
+                                       <p className="text-gray-400">Tel: +91-9587213384</p>
+                  <p className="text-gray-400">+91-7015145455</p>
                                 
                                     <div className='mt-5'>
                                         <h2 className="text-2xl">Send an E-mail</h2>
-                                        <p className="text-gray-400">info@mld.ng</p>
+                                        <p className="text-gray-400"> inflection.consultingIT@gmail.com</p>
                                     </div>
                             
                                 </div>
