@@ -108,7 +108,7 @@ const Footer = () => {
 
                   <li className="ml-4">
                     <a
-                      href="https://instagram.com/your_handle"
+                      href="https://www.instagram.com/inflection.consulting/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex justify-center items-center text-pink-600 hover:text-pink-800 bg-white rounded-full shadow transition duration-150 ease-in-out p-2"
@@ -127,7 +127,7 @@ const Footer = () => {
 
                   <li className="ml-4">
                     <a
-                      href="https://linkedin.com/in/your_profile"
+                      href="https://linkedin.com/in/e"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex justify-center items-center text-blue-700 hover:text-blue-900 bg-white rounded-full shadow transition duration-150 ease-in-out p-2"

@@ -210,7 +210,7 @@ const Contact = () => {
 
               <div className="flex my-4 w-2/3 lg:w-1/2">
                 <a
-                  href="https://www.instagram.com/ENLIGHTENEERING/"
+                  href="https://www.instagram.com/inflection.consulting/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full flex justify-center items-center bg-white h-8 text-blue-900 w-8 mx-1"
@@ -227,7 +227,7 @@ const Contact = () => {
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/company/enlighteneering-inc-"
+                  href="https://www.linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full flex justify-center items-center bg-white h-8 text-blue-900 w-8 mx-1"
